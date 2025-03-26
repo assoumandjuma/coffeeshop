@@ -156,7 +156,7 @@
             </div>
             <button type="submit" class="register-btn">Register</button>
         </form>
-        <p class="form-footer">Already have an account? <a href="login.html">Login here</a></p>
+        <p class="form-footer">Already have an account? <a href="login.php">Login here</a></p>
     </div>
 
     <script>

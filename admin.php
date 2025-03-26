@@ -490,6 +490,12 @@ $result_products = $conn->query($sql_products);
 $product_count = $result_products->fetch_assoc()['product_count'];
 
 // Get today's sales
+ // Get total sales for the month
+$sql_total_sales = "SELECT SUM(total_amount) as total_sales FROM orders WHERE MONTH(order_date) = MONTH(CURDATE())";
+$result_total_sales = $conn->query($sql_total_sales);
+$total_sales = $result_total_sales->fetch_assoc()['total_sales'] ?? 0;
+
+// Get today's sales
 $sql_sales = "SELECT SUM(total_amount) as today_sales FROM orders WHERE DATE(order_date) = CURDATE()";
 $result_sales = $conn->query($sql_sales);
 $today_sales = $result_sales->fetch_assoc()['today_sales'] ?? 0;
