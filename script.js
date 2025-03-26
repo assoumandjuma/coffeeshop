@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         const user = userCredential.user;
         alert("Registration successful! Welcome, " + firstName + " " + secondName);
-        window.location.href = "login.php"; 
+        window.location.href = "admin.php"; 
       })
       .catch((error) => {
         alert("Error: " + error.message);
